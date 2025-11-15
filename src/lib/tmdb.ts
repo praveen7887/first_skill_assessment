@@ -1,7 +1,7 @@
 import { Movie, MovieDetail, MovieListResponse } from '@/types/movie';
 
 const BASE_URL = 'https://api.themoviedb.org/3';
-const API_KEY = process.env.TMDB_API_KEY;
+const API_KEY = process.env.TMDB_API_KEY??"f7fb05e1be9ac8b18b1deccc3e36bb84";
 
 async function fetchWithTimeout(url: string, timeout = 10000): Promise<Response> {
   const controller = new AbortController();
